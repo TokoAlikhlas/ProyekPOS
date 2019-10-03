@@ -127,8 +127,8 @@ if(!isset($_SESSION['username'])) {
             </a>
         </li>
         <li>
-            <a href="#">
-                Follow Up
+            <a href="logout.php">
+                Logout
                 <span class="sidebar-badge badge-circle">i</span>
             </a>
         </li>

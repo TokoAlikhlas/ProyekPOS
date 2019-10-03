@@ -4,6 +4,6 @@
 ?>
 
 <div align="center">
-  <h2>Anda telah berhasil logout..</h2>
-  Silahkan klik <a href="login.php">disini</a> untuk login kembali
+  <h2>Terimaksih Semoga Pekerjaanmu Lancar</h2>
+  Klik <a href="login.php">disini</a> untuk login kembali
 </div>

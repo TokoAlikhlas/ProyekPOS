@@ -75,8 +75,8 @@
                     </div>
 
                     <div class="text-center p-t-25">
-                        <a class="txt1" href="#">
-							Not Registered?
+                        <a class="txt1" href="daftar.php">
+							Belum terdaftar?
 						</a>
                     </div>
 				</form>
