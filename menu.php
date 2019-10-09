@@ -158,7 +158,7 @@ if(!isset($_SESSION['username'])) {
 <div class="wrapper">
     <!-- Sidebar Constructor -->
     <div class="constructor">
-        <h2 class="headline">Home</h2>
+        <h2 class="headline">Daftar Menu</h2>
         <hr />
     </div>
 </div>
