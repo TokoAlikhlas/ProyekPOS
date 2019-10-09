@@ -12,6 +12,7 @@ if(!isset($_SESSION['username'])) {
 <head>
   <meta charset="UTF-8">
   <title>Material Design - Sidebar (Profile menu)</title>
+  <link rel=“stylesheet” href=“https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
@@ -161,7 +162,69 @@ if(!isset($_SESSION['username'])) {
         <h2 class="headline">Daftar Menu</h2>
         <hr />
     </div>
+    <br/>
+<br/>
+	<table border="1">
+		<tr>
+			<th>NO</th>
+			<th>Nama Barang</th>
+			<th>Stok</th>
+			<th>Harga</th>
+			<th>OPSI</th>
+		</tr>
+		<?php 
+		include 'koneksi.php';
+		$no = 1;
+		$data = mysqli_query($db,"select * from menu");
+		while($d = mysqli_fetch_array($data)){
+			?>
+			<tr>
+				<td><?php echo $no++; ?></td>
+				<td><?php echo $d['nama_barang']; ?></td>
+				<td><?php echo $d['stok']; ?></td>
+				<td><?php echo $d['harga']; ?></td>
+				<td>
+					<a href="edit.php?id=<?php echo $d['id']; ?>">EDIT</a>
+					<a href="hapus.php?id=<?php echo $d['id']; ?>">HAPUS</a>
+				</td>
+			</tr>
+			<?php 
+		}
+		?>
+	</table>
+    <br/>
+    <table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
 </div>
+
 <!-- partial -->
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
